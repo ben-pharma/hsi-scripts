@@ -1,0 +1,61 @@
+define
+
+paper_authorship sub relation,
+relates authored_paper,
+relates paper_author,
+has publication_date;
+
+  paper sub entity,
+  plays authored_paper,
+    has paper_abstract,
+    has conclusions,
+    has copyrights,
+    has doi,
+    has journal,
+    has keywords,
+    has methods,
+    has pubmed_id,
+    has results,
+    has title,
+    has publication_date,
+    has xml;
+
+  author sub entity,
+      plays paper_author,
+      has firstname,
+      has lastname,
+      has initial,
+      has affiliation;
+
+publication_date sub attribute,
+  datatype string;
+paper_abstract sub attribute,
+  datatype string;
+conclusions sub attribute,
+  datatype string;
+copyrights sub attribute,
+  datatype string;
+doi sub attribute,
+  datatype string;
+journal sub attribute,
+  datatype string;
+keywords sub attribute,
+  datatype string;
+methods sub attribute,
+  datatype string;
+pubmed_id sub attribute,
+  datatype string;
+results sub attribute,
+  datatype string;
+title sub attribute,
+    datatype string;
+xml sub attribute,
+    datatype string;
+firstname sub attribute,
+    datatype string;
+lastname sub attribute,
+  datatype string;
+initial sub attribute,
+  datatype string;
+affiliation sub attribute,
+    datatype string;
